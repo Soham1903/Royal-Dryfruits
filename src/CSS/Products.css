@@ -1,0 +1,188 @@
+/* Center the product list container */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally center the content */
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto; /* Centers the entire list */
+  max-width: 1200px; /* Limits the maximum width for better alignment */
+}
+
+/* Style for individual product cards */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  flex-basis: calc(25% - 40px); /* Adjusted for gap between cards */
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
+  border-radius: 8px; /* Softens the edges of the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Adds a subtle lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a shadow on hover */
+}
+
+/* Ensure the product image fits well in the card */
+.product-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-img img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Add this to your Products.css */
+.filter-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 20px; /* Space below the filter buttons */
+  justify-content: center; /* Center the buttons */
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #e0e0e0; /* Change background on hover */
+}
+
+.filter-buttons button.active {
+  background-color: #007bff; /* Active button background color */
+  color: white; /* Active button text color */
+}
+
+.product-buttons {
+  display: flex;
+  gap: 4px; /* Reduced gap for better alignment */
+  justify-content: space-between; /* Ensure buttons are evenly spaced */
+  align-items: center; /* Vertically align the buttons */
+}
+
+.add-to-cart-button {
+  padding: 5px 0; /* Adjusted padding for a smaller button */
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px; /* Smaller font size */
+  width: 48%; /* Each button takes up half the available width */
+  height: 35px; /* Set a fixed height for consistency */
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  text-align: center; /* Center text */
+  display: inline-flex; /* Flexbox for better alignment */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Smooth transition */
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.buy-now-button {
+  padding: 5px 0; /* Adjusted padding for a smaller button */
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px; /* Smaller font size */
+  width: 48%; /* Each button takes up half the available width */
+  height: 35px; /* Set a fixed height for consistency */
+  background-color: #ff5722; /* Orange background */
+  color: white; /* White text */
+  text-align: center; /* Center text */
+  display: inline-flex; /* Flexbox for better alignment */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.buy-now-button:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Star Rating */
+.star-rating {
+  color: rgb(255, 217, 0); /* Color for filled stars */
+}
+
+.filled-star {
+  color: gold;
+}
+
+.empty-star {
+  color: rgb(44, 22, 22); /* Color for empty stars */
+}
+
+.price-rating {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Distributes space between items */
+  margin-top: 5px;
+}
+
+.price {
+  margin-right: 10px; /* Add some space between price and rating */
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+p.price {
+  margin-top: 10px;
+}
+/* Product link styling */
+.product-card a {
+  text-decoration: none;
+  color: inherit; /* Ensure the link inherits the surrounding text color */
+}
+
+.product-card a:hover {
+  color: #007bff; /* Change link color on hover */
+}
+
+/* Style the product card text */
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333; /* Ensure a clear text color */
+  font-weight: bold;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #666; /* Secondary text color for descriptions */
+}
+
+/* Additional hover effect for product links */
+.product-card:hover a {
+  color: #007bff; /* Ensures the product link changes color on card hover */
+}
+
+.custom-alert {
+  font-size: 0.9rem; /* Adjust the font size */
+  padding: 0.5rem 1rem;
+  /* Adjust padding */
+}
+
+h1 {
+  font-family: "Oswald";
+}

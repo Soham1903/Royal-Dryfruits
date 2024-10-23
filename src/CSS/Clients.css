@@ -1,0 +1,39 @@
+.clients-container {
+  width: 78%; /* Adjust this to your desired width */
+  overflow: hidden;
+  margin: 0 auto; /* Center the container */
+  position: relative;
+}
+
+.clients-slider {
+  display: flex;
+  animation: slide 15s linear infinite; /* Adjust speed as needed */
+}
+
+.client-logo {
+  min-width: 150px; /* Adjust based on logo sizes */
+  margin: 0 20px; /* Space between logos */
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Adjust this to half the width of the logos */
+  }
+}
+
+.clients-heading {
+  font-family: "Oswald";
+  margin-bottom: 20px;
+  margin-top: 60px; /* Text shadow for depth */
+}

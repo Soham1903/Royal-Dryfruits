@@ -1,0 +1,242 @@
+/* Navbar container with inner shadow and gradient */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #dddddd, #ffffff);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 80%;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Remove underline from all text */
+body,
+.navbar-links li,
+.navbar-links li a {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 10px 15px; /* Adjust padding for mobile */
+  }
+
+  .navbar-links {
+    display: none; /* Hide navbar links initially */
+  }
+
+  .navbar-container.active .navbar-links {
+    display: flex; /* Show links when active */
+    flex-direction: column;
+    gap: 10px; /* Add gap between links */
+    width: 100%; /* Full width */
+  }
+
+  .search-bar {
+    display: block; /* Show search bar on mobile */
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Add margin */
+  }
+
+  .cart-icon,
+  .social-icons {
+    margin-top: 10px; /* Add margin for spacing */
+  }
+}
+
+/* Logo */
+.logo {
+  max-height: 50px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  flex-grow: 1; /* Allow left side to take available space */
+}
+
+/* Right side of the Navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Align items vertically centered */
+}
+
+.navbar-links li,
+.navbar-links li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000; /* Default color */
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Change color on hover */
+.navbar-links li:hover,
+.navbar-links li a:hover {
+  color: #1a73e8; /* Blue color on hover */
+}
+
+/* Underline effect on hover */
+.navbar-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #333; /* Default underline color */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+/* Hamburger Menu for mobile */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hamburger-menu span {
+  height: 2px;
+  width: 25px;
+  background: #333; /* Hamburger bar color */
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+}
+
+/* Search bar styling */
+.search-bar {
+  display: none; /* Hidden by default */
+}
+
+/* Show search bar when active */
+.navbar-container.active .search-bar {
+  display: block; /* Show when navbar is active */
+}
+
+/* Cart icon styling */
+.cart-icon {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #1a73e8;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: #000000; /* Change color on hover */
+}
+
+/* Social icons */
+.social-icons a {
+  color: #333;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #053675; /* Color on hover */
+}
+
+/* Dropdown menu styling */
+.navbar-links .dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 8px;
+  top: 100%; /* Position below the parent */
+  left: 0;
+  min-width: 150px;
+  z-index: 10; /* Bring above other elements */
+}
+
+.navbar-links .dropdown-menu li {
+  padding: 10px 15px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.navbar-links .dropdown-menu li a {
+  color: #333;
+  text-decoration: none; /* Remove underline */
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links .dropdown-menu li:hover a {
+  color: #1a73e8; /* Change color on hover */
+}
+
+/* Show dropdown on hover */
+.navbar-links li.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Media query for mobile dropdown */
+@media (max-width: 768px) {
+  .navbar-links .dropdown-menu {
+    position: static; /* Stack dropdown in mobile view */
+    box-shadow: none; /* Remove shadow */
+    background: none; /* Remove background */
+  }
+
+  .navbar-links .dropdown-menu li {
+    padding-left: 0; /* Remove padding */
+  }
+}
+
+a {
+  color: black; /* Default link color */
+}
+
+a:hover {
+  color: #1a73e8; /* Hover link color */
+}
+
+.cart-icon a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.cart-icon a:hover {
+  color: #1a73e8; /* Change color on hover if desired */
+}
+
+.navbar-links li Link {
+  color: black; /* Ensure links have default color */
+}

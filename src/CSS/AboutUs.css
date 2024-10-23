@@ -1,0 +1,132 @@
+/* Heading Section */
+.heading-text {
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap; /* Ensures the text stays on one line */
+  margin-bottom: 80px; /* Adds more space below the heading */
+  transition: all 0.4s ease-in-out;
+  margin-top: 40px;
+}
+
+hr {
+  border: none;
+  height: 2px; /* Thickness of the line */
+  background-color: #333; /* Line color */
+  margin: 20px 0; /* Spacing around the line */
+  width: 80%; /* Adjust the width to fit the container */
+  margin-left: auto; /* Centering the line horizontally */
+  margin-right: auto;
+}
+
+.heading-text:hover {
+  color: #1f2d6b;
+  letter-spacing: 2px;
+}
+
+.products-word {
+  color: #1f2d6b;
+  font-weight: bolder;
+  display: inline;
+}
+
+/* Center the heading within the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.about-card {
+  width: 30%;
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Advanced Hover Effects */
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Colors */
+.mission {
+  background-color: #355a6f; /* Dark blue */
+}
+
+.vision {
+  background-color: #8a4744; /* Dark red */
+}
+
+.strategy {
+  background-color: #55734b; /* Dark green */
+}
+
+/* Card Typography */
+.about-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.read-more {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 80%; /* Cards take more space on smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-text {
+    font-size: 15px; /* Adjust font size on smaller screens */
+  }
+
+  .about-card {
+    width: 100%;
+  }
+}

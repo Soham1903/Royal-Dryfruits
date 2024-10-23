@@ -1,0 +1,16 @@
+.carousel-container {
+  width: 80%; /* Set the width to match the navbar */
+  margin: 0 auto; /* Center align the carousel */
+}
+
+.carousel p.legend {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}

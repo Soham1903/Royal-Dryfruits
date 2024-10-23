@@ -1,0 +1,103 @@
+/* Footer Container */
+.footer {
+  background-color: #1f2d6b;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer Section Titles */
+.footer h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Footer Paragraph */
+.footer-about p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Footer Links Styling */
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffc107; /* Highlight color on hover */
+}
+
+/* Social Media Section */
+.footer-socials {
+  text-align: center;
+}
+
+.footer-socials .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px; /* Adjust icon size */
+  margin-top: 10px; /* Space between "Follow Us" and icons */
+}
+
+.footer-socials a {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effects for Social Media Icons */
+.footer-socials a:hover {
+  color: #ffc107; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #162248;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    display: block;
+  }
+
+  .footer-socials .social-icons {
+    margin-top: 10px;
+  }
+}
