@@ -10,9 +10,7 @@ import {
 import { CartContext } from "../CartContext";
 import "../CSS/Navbar.css";
 
-const productData = [
-  // Your product data...
-];
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // State for search query
