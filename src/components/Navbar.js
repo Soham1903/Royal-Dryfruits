@@ -26,9 +26,7 @@ function Navbar() {
  
 
   // Filter products based on search query
-  const filteredProducts = productData.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
 
   return (
     <div>
