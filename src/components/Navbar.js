@@ -108,19 +108,7 @@ function Navbar() {
       </div>
 
       {/* Display filtered products based on search */}
-      <div className="filtered-products">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <img src={product.image} alt={product.name} />
-              <h4>{product.name}</h4>
-              <p>Price: ₹{product.price}</p>
-            </div>
-          ))
-        ) : (
-          <p></p>
-        )}
-      </div>
+     
     </div>
   );
 }
