@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faTwitter,
@@ -15,8 +15,7 @@ const productData = [
 ];
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState(""); // State for search query
+  const [menuOpen, setMenuOpen] = useState(false); // State for search query
   const { getCartCount } = useContext(CartContext); // Get the cart count
 
   const toggleMenu = () => {
@@ -24,9 +23,7 @@ function Navbar() {
   };
 
   // Function to handle search input change
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value); // Update search query state
-  };
+ 
 
   // Filter products based on search query
   const filteredProducts = productData.filter((product) =>
