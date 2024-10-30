@@ -79,17 +79,17 @@ function Navbar() {
 
         {/* Search Bar */}
         <div className="navbar-right">
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={handleSearchChange} // Handle search input change
-            />
-            <button>
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
-          </div>
+          // <div className="search-bar">
+          //   <input
+          //     type="text"
+          //     placeholder="Search..."
+          //     value={searchQuery}
+          //     onChange={handleSearchChange} // Handle search input change
+          //   />
+          //   <button>
+          //     <FontAwesomeIcon icon={faSearch} />
+          //   </button>
+          // </div>
 
           {/* Cart Icon */}
           <div className="cart-icon">
